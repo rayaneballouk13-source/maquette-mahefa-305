@@ -1,0 +1,396 @@
+<!DOCTYPE html><html class="dark" lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: "#0B0E13",
+              dark: "#12161D",
+              card: "#181D26",
+              cardHover: "#1E2430",
+              border: "#242A35",
+              borderLight: "#323A48",
+              red: "#F01030",
+              orange: "#FF7A1A",
+              text: "#F3F4F6",
+              muted: "#9CA3AF",
+              dim: "#6B7280"
+            }
+          },
+          fontFamily: {
+            display: ["'Space Grotesk'", "sans-serif"],
+            mono: ["'JetBrains Mono'", "monospace"],
+            sans: ["'Inter'", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Subtle editorial film grain simulated via transparent svg pattern */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+    }
+    ::selection {
+      background-color: #F01030;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-brand-text font-sans antialiased selection:bg-brand-red selection:text-white">
+<!-- ================= 1. HEADER ================= -->
+<header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-border">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between h-16"><a class="flex items-center gap-2.5 group" href="#">
+<div class="w-7 h-7 rounded-md bg-brand-red flex items-center justify-center transition-transform group-hover:scale-95">
+<svg class="w-3 h-3 fill-white" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"></polygon></svg>
+</div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-base tracking-tight text-white group-hover:text-brand-orange transition-colors">ANTSA</span>
+<span class="font-mono text-[9px] text-brand-muted tracking-widest leading-none">@mahefa305</span>
+</div>
+</a>
+<!-- Mobile Direct Action CTA -->
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-gradient-to-r from-brand-red to-brand-orange text-white text-[11px] font-semibold tracking-wide uppercase shadow-sm hover:brightness-110 active:scale-95 transition-all" href="#contact">
+<span class="">Devis</span>
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div></div>
+</header>
+<main class="pt-16">
+<!-- ================= 2. HERO SECTION ================= -->
+<section class="relative bg-brand-black px-6 sm:px-8 py-16 md:py-24 max-w-7xl mx-auto overflow-hidden"><!-- Crisp crop guides decoration -->
+<div class="flex items-center justify-between text-brand-border font-mono text-[10px] select-none pb-4 border-b border-brand-border/40">
+<span class="">[ REC_01 // 4K 24FPS ]</span>
+<span class="">[ TIMECODE: 00:00:14:12 ]</span>
+</div>
+<div class="flex flex-col gap-6 pt-6">
+<!-- Editorial pill tag -->
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-brand-dark border border-brand-border rounded text-[11px] font-mono text-brand-muted w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-red"></span>
+<span class="">MONTEUR VIDÉO &amp; NARRATEUR VISUEL</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display font-bold text-3xl sm:text-5xl leading-[1.12] tracking-tight text-white">
+    Je découpe tes rushs pour créer des vidéos à fort 
+    <span class="relative inline-block whitespace-nowrap">
+      impact
+      <svg class="absolute left-0 -bottom-1.5 w-full h-3 text-brand-red" fill="none" preserveAspectRatio="none" viewBox="0 0 200 12">
+<path d="M2 9.5C45 4.5 125 3 198 7C140 10.5 60 11.5 8 10" stroke="currentColor" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+</span>.
+  </h1>
+<!-- Visual Preview Placed Directly Below Headline as explicitly required -->
+<div class="relative flex justify-center py-2 my-1">
+<!-- Top tape label -->
+<div class="absolute -top-2 right-4 z-20 bg-brand-orange text-brand-black text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded shadow-sm rotate-2">
+      RUSH_EDIT_ACTIVE
+    </div>
+<!-- Phone Frame -->
+<div class="relative w-full max-w-[320px] h-[430px] rounded-[1.75rem] bg-brand-card border border-brand-border p-2.5 shadow-xl">
+<div class="relative w-full h-full rounded-[1.3rem] overflow-hidden bg-brand-black flex flex-col justify-between p-3.5 border border-brand-border/60">
+<img class="absolute inset-0 w-full h-full object-cover opacity-85" data-alt="High contrast fitness gym athlete lifting weights with dynamic lighting, deep shadows, cinematic warm tones, chalk dust particles floating in air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaGyhv-AEYGgKbbKc7mNSIgL8jZ8RRBRT1cvZ2Gd2cx_RlqRRmgz7HEPEx7I-0STSfeA3pwgiaCcDRi5E8XoTLwgLfIWMeG6QF91_Pt-DJUqv7R7NTp0rzF-s8ZHFHasgKvrdi0D33wVErxideFiPmnsMuiWeqPIwEcvfpgIFEj5u7ZWwMAUr51RP_USlSASXpI9mXfXz92uA_x-V_nFeDQz59moQLuGMjY8eI2V2EvOR7Xn56qQHDlw">
+<div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/60"></div>
+<!-- Top video safe margin markers -->
+<div class="relative z-10 flex items-center justify-between text-[10px] font-mono">
+<span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border text-brand-red font-medium">● CUT #04</span>
+<span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border text-brand-text">00:00:18:20</span>
+</div>
+<!-- Focus marks -->
+<div class="relative z-10 flex flex-col items-center justify-center my-auto pointer-events-none opacity-80">
+<div class="w-12 h-12 border-t-2 border-l-2 border-white/60 absolute -top-6 -left-6"></div>
+<div class="w-12 h-12 border-b-2 border-r-2 border-white/60 absolute -bottom-6 -right-6"></div>
+<span class="w-2 h-2 rounded-full bg-brand-red"></span>
+</div>
+<!-- Bottom Scrubber UI -->
+<div class="relative z-10 flex flex-col gap-1.5 bg-brand-black/90 p-2.5 rounded-lg border border-brand-border">
+<div class="flex items-center justify-between text-[9px] font-mono text-brand-muted">
+<span class="">MASTER_V02.mp4</span>
+<span class="text-brand-orange">SYNC AUDIO OK</span>
+</div>
+<div class="relative w-full h-2.5 bg-brand-dark rounded border border-brand-border overflow-hidden flex items-center">
+<div class="h-full w-2/5 bg-brand-red/80"></div>
+<div class="w-1 h-3.5 bg-white shadow-sm"></div>
+<div class="h-full w-3/5 bg-brand-card"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtext follows phone preview directly -->
+<p class="font-sans text-brand-muted text-sm sm:text-base leading-relaxed">
+    Tu m'envoies tes rushs bruts, je m'occupe du reste : découpage chirurgical, sound design organique et habillage graphique pensé pour retenir l'œil sans artifice inutile.
+  </p>
+<!-- Feature Badges -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-brand-dark rounded border border-brand-border font-mono text-xs text-brand-text">
+<svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<span class="">Livraison 48h à 72h</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-brand-dark rounded border border-brand-border font-mono text-xs text-brand-text">
+<svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+<span class="">Formats 9:16 &amp; 16:9 4K</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-brand-dark rounded border border-brand-border font-mono text-xs text-brand-text">
+<svg class="w-3.5 h-3.5 text-brand-muted flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+<span class="">Sound mix binaural</span>
+</div>
+</div>
+<!-- Hero CTAs Stacked for Mobile Touch Targets -->
+<div class="flex flex-col sm:flex-row gap-3 pt-2 w-full">
+<a class="w-full sm:w-auto text-center px-6 py-3.5 rounded-full bg-gradient-to-r from-brand-red to-brand-orange text-white font-semibold text-xs uppercase tracking-wide shadow-sm hover:brightness-110 active:scale-95 transition-all" href="#realisations">
+      Voir mes projets récents
+    </a>
+<a class="w-full sm:w-auto text-center px-6 py-3.5 rounded-full bg-brand-dark hover:bg-brand-card text-brand-text border border-brand-border hover:border-brand-borderLight font-medium text-xs uppercase tracking-wider transition-all" href="#contact">
+      Discuter d'un projet
+    </a>
+</div>
+</div></section>
+<!-- Clean SVG Divider (No blurry transitions) -->
+<div class="w-full text-brand-dark fill-current">
+<svg class="w-full h-8" preserveAspectRatio="none" viewBox="0 0 1440 24">
+<path d="M0,0 C480,24 960,24 1440,0 L1440,24 L0,24 Z"></path>
+</svg>
+</div>
+<!-- ================= 3. TOOLS STRIP ================= -->
+<section class="w-full bg-brand-dark py-8 px-6 sm:px-8 border-y border-brand-border">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-brand-muted">
+<span class="w-1.5 h-1.5 bg-brand-orange"></span>
+<span class="">Boîte à outils de production</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded bg-brand-card border border-brand-border text-xs font-mono text-brand-text">
+<span class="font-bold text-white px-1 py-0.5 rounded bg-[#00005b] text-[10px]">Pr</span>
+<span class="">Premiere Pro</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded bg-brand-card border border-brand-border text-xs font-mono text-brand-text">
+<span class="font-bold text-white px-1 py-0.5 rounded bg-[#00005b] text-[10px]">Ae</span>
+<span class="">After Effects</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded bg-brand-card border border-brand-border text-xs font-mono text-brand-text">
+<span class="font-bold text-brand-orange text-[11px]">Da</span>
+<span class="">DaVinci Studio</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded bg-brand-card border border-brand-border text-xs font-mono text-brand-text">
+<svg class="w-3.5 h-3.5 text-brand-text" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect height="14" rx="2" ry="2" width="15" x="1" y="5"></rect></svg>
+<span class="">CapCut</span>
+</div>
+</div></div>
+</section>
+<!-- ================= 4. RÉALISATIONS (Asymmetric Mosaic) ================= -->
+<section class="w-full bg-brand-black px-6 sm:px-8 py-24" id="realisations">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<!-- Section Header Left-Aligned -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2 border-b border-brand-border">
+<div class="flex flex-col gap-2 max-w-xl">
+<span class="font-mono text-xs uppercase tracking-widest text-brand-red font-semibold">[ 01 // ARCHIVES DU TIMELINE ]</span>
+<h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Sélection de projets livrés</h2>
+<p class="font-sans text-brand-muted text-sm sm:text-base">
+              Pas de chiffres gonflés. Juste des vidéos qui accrochent dès la première frame et servent le message sans artifice.
+            </p>
+</div>
+<!-- Category filter buttons with sharp 1px borders -->
+<div class="flex flex-wrap items-center gap-2" id="portfolio-filters"><button class="portfolio-filter-btn px-3 py-1.5 rounded border border-brand-red bg-brand-red text-white text-[11px] font-mono uppercase transition-all" data-category="all">Tous (06)</button>
+<button class="portfolio-filter-btn px-3 py-1.5 rounded border border-brand-border bg-brand-card text-brand-muted hover:text-white text-[11px] font-mono uppercase transition-all" data-category="vertical">Reels (03)</button>
+<button class="portfolio-filter-btn px-3 py-1.5 rounded border border-brand-border bg-brand-card text-brand-muted hover:text-white text-[11px] font-mono uppercase transition-all" data-category="commercial">Commercial (02)</button>
+<button class="portfolio-filter-btn px-3 py-1.5 rounded border border-brand-border bg-brand-card text-brand-muted hover:text-white text-[11px] font-mono uppercase transition-all" data-category="motion">Motion (01)</button></div>
+</div>
+<!-- Asymmetric Varied Mosaic Grid -->
+<div class="flex flex-col gap-2"><div class="flex items-center justify-between text-[11px] font-mono text-brand-muted px-1"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>Projets sélectionnés</span><span class="text-brand-orange flex items-center gap-1">Glisser <span class="">→</span></span></div><div class="carousel-container flex flex-row overflow-x-auto gap-4 pb-4 -mx-6 px-6 sm:-mx-8 sm:px-8 no-scrollbar snap-x snap-mandatory"><div class="portfolio-card flex-shrink-0 w-[84vw] max-w-[340px] snap-center group relative bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-xl overflow-hidden flex flex-col justify-between min-h-[420px] p-5" data-category="commercial"><span class="absolute top-3 left-3 text-brand-muted/40 font-mono text-xs select-none">┌ CAM A</span><span class="absolute top-3 right-3 text-brand-muted/40 font-mono text-xs select-none">2.39:1 ┐</span><img class="absolute inset-0 w-full h-full object-cover opacity-75" data-alt="Cinematic streetwear editorial campaign video still, moody urban Tokyo street at night, neon reflections on wet asphalt, model in technical hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0gt-x31W2-vwvw8C-f1p_AcTm1xjZu4_Q7GgwBZ42CYLHkEw3bOF7s2Fm0fiVObKLfvwCqumQlVORh3LkywiZqnb225hrHPKN93ai7WDceZG2Q01-70XNPdluuU-fMIgZmtYyYXCHOf4sztd0R4vI1MtEwjL6W7mi4ghPFaq7Fml34EUpk41yOIXwZ7CYcEewnJvAAe4LYfAms70BWWq5rYng2MU_atyDT_m3s9Nei4Kx1GlUsT5jHA"><div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent"></div><div class="relative z-10 flex items-center justify-between"><span class="px-2.5 py-1 rounded bg-brand-black/85 border border-brand-border text-brand-orange font-mono text-xs font-medium">FILM DE MARQUE</span><span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border font-mono text-[11px] text-brand-muted">01:15</span></div><div class="relative z-10 flex flex-col gap-1.5"><span class="font-mono text-xs text-brand-muted uppercase">Streetwear // FW25</span><h3 class="font-display font-bold text-xl text-white">Campagne Summer Drop</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Montage non-linéaire basé sur le rythme musical, étalonnage contrasté et sound design urbain.</p></div></div><div class="portfolio-card flex-shrink-0 w-[84vw] max-w-[340px] snap-center group relative bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-xl overflow-hidden flex flex-col justify-between min-h-[420px] p-5" data-category="vertical"><span class="absolute top-3 left-3 text-brand-muted/40 font-mono text-xs select-none">┌ 9:16</span><span class="absolute top-3 right-3 text-brand-muted/40 font-mono text-xs select-none">VERT ┐</span><img class="absolute inset-0 w-full h-full object-cover opacity-75" data-alt="Culinary close up of sizzling smash burger with melted cheese and fresh brioche bun, ultra-sharp macro lens, appetizing warm golden backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWQYvJUETfi_iPeyLUuRor9j48qE6DAcWeftMAIUyi6YONp1-SFHX-lk4-IteyxxUx2lFJzlIiBA7kIBx2LmhGGc0IFesxdaS9MjtViWyKYb7M4A2UENXyq1MZ5fwnhj2mokt4yGV4h8PoJohugySLPWryfbObMrJ3rQovN57jfk07Iv6r8EdDkyZ-ACC-W2qEGYayHLwdIKkA-PRELDW_OpiusltXOZRUJjtZ7-OrzH95LLwhuiwD9g"><div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent"></div><div class="relative z-10 flex items-center justify-between"><span class="px-2.5 py-1 rounded bg-brand-black/85 border border-brand-border text-brand-red font-mono text-xs font-medium">REEL CULINAIRE</span><span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border font-mono text-[11px] text-brand-muted">00:28</span></div><div class="relative z-10 flex flex-col gap-1.5"><span class="font-mono text-xs text-brand-muted uppercase">Format Rapide // Food</span><h3 class="font-display font-bold text-xl text-white">Recette Express &amp; ASMR</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Zoom cuts dynamiques et spatialisation sonore des textures pour stimuler l'appétit instantanément.</p></div></div><div class="portfolio-card flex-shrink-0 w-[84vw] max-w-[340px] snap-center group relative bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-xl overflow-hidden flex flex-col justify-between min-h-[420px] p-5" data-category="vertical"><span class="absolute top-3 left-3 text-brand-muted/40 font-mono text-xs select-none">┌ 9:16</span><span class="absolute top-3 right-3 text-brand-muted/40 font-mono text-xs select-none">AUDIO ┐</span><img class="absolute inset-0 w-full h-full object-cover opacity-75" data-alt="High production podcast studio with two creators talking passionately into Shure SM7B microphones, warm tungsten rim lights, moody dark acoustic walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApmZePkQXXOXTb2j3_OvDx6Cg3U_SRMkcrBUwuXZhG6ofuoBNcKxT-2eoPdfyyDzjhrX3Ri8Z7dprCloBE303m5t9s6a2dFS4JiNZxhCrrUGeGFSieiQeE3RiOIjxCFmFAymGlCbR2hjju1t5jCSW7RbsuNMy6vgPe-tur1C22UvtrsZ6hCI3ckhBTIPUTJNvE_QAo7OzHCovSd0p9bqu9rBhM1o3P33HhQGWxhPgpKenNhVqFCgXQ6w"><div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent"></div><div class="relative z-10 flex items-center justify-between"><span class="px-2.5 py-1 rounded bg-brand-black/85 border border-brand-border text-brand-text font-mono text-xs font-medium">TALK / PODCAST</span><span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border font-mono text-[11px] text-brand-muted">00:52</span></div><div class="relative z-10 flex flex-col gap-1.5"><span class="font-mono text-xs text-brand-muted uppercase">Voix // Sous-titres</span><h3 class="font-display font-bold text-xl text-white">Interview &amp; Punchlines</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Typographie animée sur-mesure, sound punchs et valorisation des silences.</p></div></div><div class="portfolio-card flex-shrink-0 w-[84vw] max-w-[340px] snap-center group relative bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-xl overflow-hidden flex flex-col justify-between min-h-[420px] p-5" data-category="motion"><span class="absolute top-3 left-3 text-brand-muted/40 font-mono text-xs select-none">┌ 2D/3D</span><span class="absolute top-3 right-3 text-brand-muted/40 font-mono text-xs select-none">AFTER ┐</span><img class="absolute inset-0 w-full h-full object-cover opacity-75" data-alt="Futuristic 3D metallic chrome logo rotating with incandescent orange neon laser trails on deep space black background, motion graphics showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd6AGC5fOCaWAkeEl6uA6aF4WcXlpye6Z48g7OxzBRMU8gqNm4KHWBSZE0weMQm3Y2D6RjsZvCcHReFzXYomNFc7VbNBkPCV72qoXdeyC66-Bfv6OKvWZB4ieLK08imtPa_6_PGKiQFTtSfXcKll-uaPJ7ZkWiXJ8suAvO4Vr22sz5pI0Ydzi77DwAHeBbpTE1tQ32Id2Wo1RFJThE0Iclcvr3ZsAEgDkvkH0uCrEDNBvIIKAPESxD1w"><div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent"></div><div class="relative z-10 flex items-center justify-between"><span class="px-2.5 py-1 rounded bg-brand-black/85 border border-brand-border text-brand-orange font-mono text-xs font-medium">ANIMATION LOGO</span><span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border font-mono text-[11px] text-brand-muted">00:08</span></div><div class="relative z-10 flex flex-col gap-1.5"><span class="font-mono text-xs text-brand-muted uppercase">Motion Graphics // Intro</span><h3 class="font-display font-bold text-xl text-white">Identité &amp; Jingle Sonore</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Animation typographique dynamique et bruitage mécanique précis pour signature de fin.</p></div></div><div class="portfolio-card flex-shrink-0 w-[84vw] max-w-[340px] snap-center group relative bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-xl overflow-hidden flex flex-col justify-between min-h-[420px] p-5" data-category="vertical"><span class="absolute top-3 left-3 text-brand-muted/40 font-mono text-xs select-none">┌ 9:16</span><span class="absolute top-3 right-3 text-brand-muted/40 font-mono text-xs select-none">COLOR ┐</span><img class="absolute inset-0 w-full h-full object-cover opacity-75" data-alt="Vlogger capturing cinematic golden hour sunset over sea cliffs with mirrorless camera on gimbal, cinematic teal and orange tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6We6Bso0wl1watXmMXduaKMyNivX4o1uXv4wG7V2LwWMB-kmNknuOfQimdsmQ79GC2kAOxHXP0TlpyEcs6ECuZZWOeECC0_qHE1_VI8ANoWay5wn5jrNtL7h6Kha5YGAWjhYJVmuE0UDs8_wYlv4vMJGClPD2N5QdatRJ_Q2ZdNn2NURi4b-HikBrWwo0MyUW12z4xAObZwy_sGAfFTDEksxSTCbRebb-rQHpdhA4DG7IxQVHCFksw"><div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent"></div><div class="relative z-10 flex items-center justify-between"><span class="px-2.5 py-1 rounded bg-brand-black/85 border border-brand-border text-brand-red font-mono text-xs font-medium">VLOG CINÉMA</span><span class="px-2 py-0.5 rounded bg-brand-black/85 border border-brand-border font-mono text-[11px] text-brand-muted">00:42</span></div><div class="relative z-10 flex flex-col gap-1.5"><span class="font-mono text-xs text-brand-muted uppercase">Outdoor // Rythme</span><h3 class="font-display font-bold text-xl text-white">Journal d'Évasion Islande</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Color grading naturel façon pellicule argentique et mise en valeur des ambiances sonores.</p></div></div></div></div>
+</div>
+</section>
+<!-- Clean SVG Divider -->
+<div class="w-full text-brand-dark fill-current">
+<svg class="w-full h-8" preserveAspectRatio="none" viewBox="0 0 1440 24">
+<path d="M0,24 L1440,24 L1440,0 C960,24 480,24 0,0 Z"></path>
+</svg>
+</div>
+<!-- ================= 5. SERVICES ================= -->
+<section class="w-full bg-brand-dark px-6 sm:px-8 py-24" id="services">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col gap-2 max-w-xl">
+<span class="font-mono text-xs uppercase tracking-widest text-brand-orange font-semibold">[ 02 // SERVICES &amp; FORMULES ]</span>
+<h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Ce que je prends en charge</h2>
+<p class="font-sans text-brand-muted text-sm sm:text-base">
+            De la sélection des meilleures prises jusqu'au master final étalonné prêt pour publication.
+          </p>
+</div>
+<!-- 4 Asymmetric Cards with individual cuts and sharp 1px borders -->
+<div class="flex flex-col gap-2"><div class="flex items-center justify-between text-[11px] font-mono text-brand-muted px-1"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"></span>4 formules adaptées</span><span class="text-brand-orange flex items-center gap-1">Glisser <span class="">→</span></span></div><div class="carousel-container flex flex-row overflow-x-auto gap-4 pb-4 -mx-6 px-6 sm:-mx-8 sm:px-8 no-scrollbar snap-x snap-mandatory"><div class="flex-shrink-0 w-[82vw] max-w-[320px] snap-center bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-tl-2xl rounded-br-2xl p-6 flex flex-col justify-between gap-5"><div class="flex items-center justify-between"><div class="w-9 h-9 rounded bg-brand-dark border border-brand-border flex items-center justify-center text-brand-red"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg></div><span class="font-mono text-xs text-brand-dim">SRV_01</span></div><div class="flex flex-col gap-2"><h3 class="font-display font-bold text-lg text-white">Montage Reels &amp; Shorts percutants</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Sélection rigoureuse des meilleurs moments, transitions invisibles au rythme du son, sous-titres intégrés et suppression des temps morts.</p></div><div class="pt-2 border-t border-brand-border/60 flex items-center justify-between text-[11px] font-mono text-brand-muted"><span class="">Format natif 9:16</span><span class="text-brand-orange">1080x1920 60fps</span></div></div><div class="flex-shrink-0 w-[82vw] max-w-[320px] snap-center bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-tr-2xl rounded-bl-2xl p-6 flex flex-col justify-between gap-5"><div class="flex items-center justify-between"><div class="w-9 h-9 rounded bg-brand-dark border border-brand-border flex items-center justify-center text-brand-orange"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><span class="font-mono text-xs text-brand-dim">SRV_02</span></div><div class="flex flex-col gap-2"><h3 class="font-display font-bold text-lg text-white">Animation de Logo &amp; Habillage</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Conception d'intros, outros, bandeaux titres et stickers personnalisés pour uniformiser ta signature sans templates préfabriqués.</p></div><div class="pt-2 border-t border-brand-border/60 flex items-center justify-between text-[11px] font-mono text-brand-muted"><span class="">Alpha transparent</span><span class="text-brand-orange">ProRes 4444</span></div></div><div class="flex-shrink-0 w-[82vw] max-w-[320px] snap-center bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-tr-2xl rounded-bl-2xl p-6 flex flex-col justify-between gap-5"><div class="flex items-center justify-between"><div class="w-9 h-9 rounded bg-brand-dark border border-brand-border flex items-center justify-center text-brand-orange"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="20" rx="2.18" ry="2.18" width="20" x="2" y="2"></rect><line x1="7" x2="7" y1="2" y2="22"></line><line x1="17" x2="17" y1="2" y2="22"></line><line x1="2" x2="22" y1="12" y2="12"></line></svg></div><span class="font-mono text-xs text-brand-dim">SRV_03</span></div><div class="flex flex-col gap-2"><h3 class="font-display font-bold text-lg text-white">Vidéos Promo &amp; Lancement</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Publicités pour produits ou événements. Récit orienté action, étalonnage soigné et adaptation multi-ratios (16:9, 1:1, 9:16).</p></div><div class="pt-2 border-t border-brand-border/60 flex items-center justify-between text-[11px] font-mono text-brand-muted"><span class="">Mixage stéréo</span><span class="text-brand-orange">Rec.709</span></div></div><div class="flex-shrink-0 w-[82vw] max-w-[320px] snap-center bg-brand-card border border-brand-border hover:border-brand-borderLight rounded-tl-2xl rounded-br-2xl p-6 flex flex-col justify-between gap-5"><div class="flex items-center justify-between"><div class="w-9 h-9 rounded bg-brand-dark border border-brand-border flex items-center justify-center text-brand-red"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></div><span class="font-mono text-xs text-brand-dim">SRV_04</span></div><div class="flex flex-col gap-2"><h3 class="font-display font-bold text-lg text-white">Accompagnement Mensuel</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Flux continu pour créateurs et marques : dépose tes rushs dans le Drive partagé, je livre tes montages prêts chaque semaine.</p></div><div class="pt-2 border-t border-brand-border/60 flex items-center justify-between text-[11px] font-mono text-brand-muted"><span class="">Drive dédié</span><span class="text-brand-orange">48h ouvrées</span></div></div></div></div>
+</div>
+</section>
+<!-- Clean SVG Divider -->
+<div class="w-full text-brand-black fill-current">
+<svg class="w-full h-8" preserveAspectRatio="none" viewBox="0 0 1440 24">
+<path d="M0,0 C480,24 960,24 1440,0 L1440,24 L0,24 Z"></path>
+</svg>
+</div>
+<!-- ================= 6. PROCESSUS ================= -->
+<section class="w-full bg-brand-black px-6 sm:px-8 py-24" id="processus">
+<div class="max-w-7xl mx-auto flex flex-col gap-14">
+<div class="flex flex-col gap-2 max-w-xl">
+<span class="font-mono text-xs uppercase tracking-widest text-brand-red font-semibold">[ 03 // MÉTHODE DE TRAVAIL ]</span>
+<h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Zéro friction, des étapes claires</h2>
+<p class="font-sans text-brand-muted text-sm sm:text-base">
+            Tu n'as pas besoin de rédiger un cahier des charges de 10 pages. Voici comment on procède.
+          </p>
+</div>
+<!-- Realistic Editing Timeline Style Steps -->
+<div class="flex flex-col gap-2"><div class="flex items-center justify-between text-[11px] font-mono text-brand-muted px-1"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>3 étapes séquentielles</span><span class="text-brand-orange flex items-center gap-1">Glisser <span class="">→</span></span></div><div class="carousel-container flex flex-row overflow-x-auto gap-4 pb-4 -mx-6 px-6 sm:-mx-8 sm:px-8 no-scrollbar snap-x snap-mandatory"><div class="flex-shrink-0 w-[80vw] max-w-[300px] snap-center bg-brand-dark border border-brand-border p-6 rounded-xl flex flex-col justify-between gap-5"><div class="flex items-center justify-between border-b border-brand-border pb-3"><span class="font-mono text-xl font-bold text-brand-red">01</span><span class="font-mono text-[10px] text-brand-muted bg-brand-card px-2 py-0.5 rounded border border-brand-border">DÉPÔT</span></div><div class="flex flex-col gap-1.5"><h3 class="font-display font-bold text-base text-white">Tu envoies tes rushs</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Lien Google Drive, Dropbox ou WeTransfer. Ajoute tes consignes vocales ou écrites et références.</p></div><div class="font-mono text-[10px] text-brand-dim pt-2 border-t border-brand-border/40">IN: 00:00:00:00 // RÉCEPTION</div></div><div class="flex-shrink-0 w-[80vw] max-w-[300px] snap-center bg-brand-dark border border-brand-border p-6 rounded-xl flex flex-col justify-between gap-5"><div class="flex items-center justify-between border-b border-brand-border pb-3"><span class="font-mono text-xl font-bold text-brand-orange">02</span><span class="font-mono text-[10px] text-brand-muted bg-brand-card px-2 py-0.5 rounded border border-brand-border">MONTAGE</span></div><div class="flex flex-col gap-1.5"><h3 class="font-display font-bold text-base text-white">Je monte &amp; j'habille</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Dérushage, découpage rythmé, sound design, étalonnage et titrage. Première version livrée sous 48h.</p></div><div class="font-mono text-[10px] text-brand-orange pt-2 border-t border-brand-border/40">PROCESSING: CUT + MIX</div></div><div class="flex-shrink-0 w-[80vw] max-w-[300px] snap-center bg-brand-dark border border-brand-border p-6 rounded-xl flex flex-col justify-between gap-5"><div class="flex items-center justify-between border-b border-brand-border pb-3"><span class="font-mono text-xl font-bold text-white">03</span><span class="font-mono text-[10px] text-brand-muted bg-brand-card px-2 py-0.5 rounded border border-brand-border">LIVRAISON</span></div><div class="flex flex-col gap-1.5"><h3 class="font-display font-bold text-base text-white">Retouches &amp; Master</h3><p class="font-sans text-brand-muted text-xs leading-relaxed">Ajustements selon tes retours précis. Tu reçois le fichier final haute définition prêt à diffuser.</p></div><div class="font-mono text-[10px] text-brand-dim pt-2 border-t border-brand-border/40">OUT: MASTER_FINAL_4K</div></div></div></div>
+</div>
+</section>
+<!-- Clean SVG Divider -->
+<div class="w-full text-brand-dark fill-current">
+<svg class="w-full h-8" preserveAspectRatio="none" viewBox="0 0 1440 24">
+<path d="M0,24 L1440,24 L1440,0 C960,24 480,24 0,0 Z"></path>
+</svg>
+</div>
+<!-- ================= 7. TARIFS ================= -->
+<section class="w-full bg-brand-dark px-6 sm:px-8 py-24" id="tarifs">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col gap-2 max-w-xl">
+<span class="font-mono text-xs uppercase tracking-widest text-brand-orange font-semibold">[ 04 // INVESTISSEMENT ]</span>
+<h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Tarifs transparents</h2>
+<p class="font-sans text-brand-muted text-sm sm:text-base">
+            Aucun coût caché. Des prix nets pensés pour les créateurs indépendants et les marques en croissance.
+          </p>
+</div>
+<div class="flex flex-col gap-2"><div class="flex items-center justify-between text-[11px] font-mono text-brand-muted px-1"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>3 formules disponibles</span><span class="text-brand-orange flex items-center gap-1">Glisser <span class="">→</span></span></div><div class="carousel-container flex flex-row overflow-x-auto gap-4 pb-4 -mx-6 px-6 sm:-mx-8 sm:px-8 items-stretch no-scrollbar snap-x snap-mandatory"><div class="flex-shrink-0 w-[84vw] max-w-[320px] snap-center bg-brand-card border border-brand-border p-6 rounded-2xl flex flex-col justify-between gap-6"><div class="flex flex-col gap-5"><div class="flex flex-col gap-1"><span class="font-mono text-xs text-brand-muted uppercase">Essai / Ponctuel</span><h3 class="font-display font-bold text-xl text-white">Starter</h3><p class="font-sans text-brand-muted text-xs">Pour tester un nouveau concept ou monter un événement ponctuel.</p></div><div class="flex items-baseline gap-2 py-2 border-y border-brand-border"><span class="font-display font-bold text-3xl text-white">120€</span><span class="font-mono text-xs text-brand-muted">/ vidéo unique</span></div><ul class="flex flex-col gap-2.5 text-xs text-brand-text"><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">1 vidéo courte (&lt;60s)</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Sous-titrage personnalisé</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Sound design &amp; musique</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">2 retouches incluses</span></li></ul></div><div class="pt-4"><a class="w-full inline-flex items-center justify-center py-3 rounded-lg bg-brand-dark hover:bg-brand-black border border-brand-border text-white text-xs font-mono uppercase tracking-wider transition-all" href="#contact">Choisir Starter</a></div></div><div class="flex-shrink-0 w-[84vw] max-w-[320px] snap-center bg-brand-card border-2 border-brand-red p-6 rounded-2xl flex flex-col justify-between gap-6 relative shadow-sm"><div class="absolute -top-3 left-6 bg-brand-red text-white text-[9px] font-mono font-bold uppercase px-2.5 py-0.5 rounded tracking-wider">RECOMMANDÉ</div><div class="flex flex-col gap-5"><div class="flex flex-col gap-1"><span class="font-mono text-xs text-brand-red uppercase font-semibold">Croissance Active</span><h3 class="font-display font-bold text-xl text-white">Pack Pro</h3><p class="font-sans text-brand-muted text-xs">Le format idéal pour alimenter régulièrement tes réseaux.</p></div><div class="flex items-baseline gap-2 py-2 border-y border-brand-border"><span class="font-display font-bold text-3xl text-white">420€</span><span class="font-mono text-xs text-brand-muted">/ lot de 4 vidéos</span></div><ul class="flex flex-col gap-2.5 text-xs text-brand-text"><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="font-medium text-white">4 vidéos découpées &amp; habillées</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Sons tendances &amp; SFX</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Étalonnage couleur sur-mesure</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Déclinaisons (9:16 + 1:1)</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Retouches réactives</span></li></ul></div><div class="pt-4"><a class="w-full inline-flex items-center justify-center py-3.5 rounded-lg bg-gradient-to-r from-brand-red to-brand-orange text-white text-xs font-mono uppercase tracking-wider font-semibold shadow-sm hover:brightness-110 active:scale-95 transition-all" href="#contact">Commander le Pack Pro</a></div></div><div class="flex-shrink-0 w-[84vw] max-w-[320px] snap-center bg-brand-card border border-brand-border p-6 rounded-2xl flex flex-col justify-between gap-6"><div class="flex flex-col gap-5"><div class="flex flex-col gap-1"><span class="font-mono text-xs text-brand-muted uppercase">Partenariat Continu</span><h3 class="font-display font-bold text-xl text-white">Mensuel</h3><p class="font-sans text-brand-muted text-xs">Délègue l'intégralité du montage pour ton activité.</p></div><div class="flex items-baseline gap-2 py-2 border-y border-brand-border"><span class="font-display font-bold text-3xl text-white">890€</span><span class="font-mono text-xs text-brand-muted">/ mois</span></div><ul class="flex flex-col gap-2.5 text-xs text-brand-text"><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="font-medium text-white">8 à 10 vidéos par mois</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Dossier Drive prioritaire</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Délais express (48h ouvrées)</span></li><li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-brand-orange flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">Allers-retours illimités</span></li></ul></div><div class="pt-4"><a class="w-full inline-flex items-center justify-center py-3 rounded-lg bg-brand-dark hover:bg-brand-black border border-brand-border text-white text-xs font-mono uppercase tracking-wider transition-all" href="#contact">Discuter du partenariat</a></div></div></div></div>
+</div>
+</section>
+<!-- Clean SVG Divider -->
+<div class="w-full text-brand-black fill-current">
+<svg class="w-full h-8" preserveAspectRatio="none" viewBox="0 0 1440 24">
+<path d="M0,0 C480,24 960,24 1440,0 L1440,24 L0,24 Z"></path>
+</svg>
+</div>
+<!-- ================= 8. CONTACT ================= -->
+<section class="w-full bg-brand-black px-6 sm:px-8 py-24" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="bg-brand-dark border border-brand-border rounded-2xl p-8 sm:p-12 relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Info -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-brand-black border border-brand-border font-mono text-xs text-brand-muted w-fit">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="">DISPONIBLE POUR NOUVEAUX PROJETS</span>
+</div>
+<h2 class="font-display font-bold text-3xl sm:text-4xl text-white">Une idée de vidéo ? Parlons-en concrètement.</h2>
+<p class="font-sans text-brand-muted text-sm sm:text-base leading-relaxed">
+                  Que tu aies déjà des rushs stockés sur un Drive ou simplement une idée sur un carnet de notes, écris-moi. Réponse en 24h ouvrées.
+                </p>
+</div>
+<!-- Direct Coordinates -->
+<div class="flex flex-col gap-4 pt-4 border-t border-brand-border font-mono text-xs">
+<div class="flex items-center gap-3">
+<span class="text-brand-muted uppercase">Email direct :</span>
+<a class="text-white hover:text-brand-orange underline underline-offset-4 transition-colors" href="mailto:contact@antsa-video.com">contact@antsa-video.com</a>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-brand-muted uppercase">Réseaux :</span>
+<span class="text-white">@mahefa305 (TikTok, Instagram, Threads)</span>
+</div>
+</div>
+</div>
+<!-- Right Form -->
+<div class="lg:col-span-7 bg-brand-black p-6 sm:p-8 rounded-xl border border-brand-border">
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault(); alert('Message transmis directement à Antsa !');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="font-mono text-xs uppercase text-brand-muted" for="contact-name">Ton nom ou marque</label>
+<input class="w-full px-4 py-2.5 rounded bg-brand-card border border-brand-border focus:border-brand-orange focus:ring-0 text-white font-sans text-sm outline-none transition-colors" id="contact-name" placeholder="Alex Dupont" required="" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono text-xs uppercase text-brand-muted" for="contact-email">Adresse email</label>
+<input class="w-full px-4 py-2.5 rounded bg-brand-card border border-brand-border focus:border-brand-orange focus:ring-0 text-white font-sans text-sm outline-none transition-colors" id="contact-email" placeholder="alex@gmail.com" required="" type="email">
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono text-xs uppercase text-brand-muted" for="contact-type">Type de format envisagé</label>
+<select class="w-full px-4 py-2.5 rounded bg-brand-card border border-brand-border focus:border-brand-orange focus:ring-0 text-white font-sans text-sm outline-none transition-colors" id="contact-type">
+<option value="reels">Montage Reels / TikTok / Shorts</option>
+<option value="pack">Pack régulier de 4 vidéos</option>
+<option value="mensuel">Partenariat mensuel continu</option>
+<option value="commercial">Vidéo de marque / Produit</option>
+<option value="motion">Animation de Logo / Motion</option>
+<option value="autre">Autre format sur-mesure</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono text-xs uppercase text-brand-muted" for="contact-msg">Détails ou lien vers tes rushs</label>
+<textarea class="w-full p-4 rounded bg-brand-card border border-brand-border focus:border-brand-orange focus:ring-0 text-white font-sans text-sm outline-none resize-none transition-colors" id="contact-msg" placeholder="Décris le projet, la deadline souhaitée ou colle le lien de ton dossier Drive..." required="" rows="4"></textarea>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-lg bg-gradient-to-r from-brand-red to-brand-orange text-white text-xs font-mono uppercase tracking-wider font-semibold shadow-sm hover:brightness-110 active:scale-95 transition-all" type="submit">
+<span class="">Envoyer mon message</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= 9. FOOTER ================= -->
+<footer class="w-full bg-brand-black border-t border-brand-border py-12 px-6 sm:px-8">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex flex-col items-center sm:items-start gap-1 font-mono text-xs">
+<div class="flex items-center gap-2">
+<span class="font-display font-bold text-base text-white tracking-tight">ANTSA</span>
+<span class="text-brand-dim">//</span>
+<span class="text-brand-muted">@mahefa305</span>
+</div>
+<p class="text-brand-dim">© 2026 Antsa – Monteur vidéo indépendant. Fait main pour les créateurs.</p>
+</div>
+<div class="flex items-center gap-6 font-mono text-xs text-brand-muted">
+<a class="hover:text-white transition-colors" href="https://instagram.com" rel="noreferrer" target="_blank">Instagram</a>
+<a class="hover:text-white transition-colors" href="https://tiktok.com" rel="noreferrer" target="_blank">TikTok</a>
+<a class="hover:text-white transition-colors" href="https://youtube.com" rel="noreferrer" target="_blank">YouTube</a>
+<a class="hover:text-white transition-colors" href="https://threads.net" rel="noreferrer" target="_blank">Threads</a>
+</div>
+</div>
+</footer>
+<!-- Portfolio filtering script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+      const cards = document.querySelectorAll('.portfolio-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-brand-red', 'text-white', 'border-brand-red');
+            b.classList.add('bg-brand-card', 'text-brand-muted', 'border-brand-border');
+          });
+          btn.classList.remove('bg-brand-card', 'text-brand-muted', 'border-brand-border');
+          btn.classList.add('bg-brand-red', 'text-white', 'border-brand-red');
+
+          const category = btn.getAttribute('data-category');
+          cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+
+</body></html>
